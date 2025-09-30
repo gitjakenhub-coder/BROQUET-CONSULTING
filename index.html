@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BROQUET CONSULTING LTD - Combined Office Administrative Services | Professional Business Solutions UK</title>
+    <meta name="description" content="BROQUET CONSULTING LTD provides expert combined office administrative services including business process optimization, administrative consulting, and comprehensive office management solutions across the UK.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .company-info {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        nav {
+            background: #9B59B6;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #F39C12;
+        }
+
+        .section {
+            padding: 3rem 2rem;
+        }
+
+        .section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #8E44AD;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #9B59B6;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(rgba(142, 68, 173, 0.8), rgba(155, 89, 182, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #F39C12;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #E67E22;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border-left: 4px solid #F39C12;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h4 {
+            color: #8E44AD;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .package-header {
+            background: linear-gradient(135deg, #F39C12, #E67E22);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .package-body {
+            padding: 2rem;
+        }
+
+        .package-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .package-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .package-features li:before {
+            content: "✓";
+            color: #27AE60;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background: #9B59B6;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .contact-info h4 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #8E44AD;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section {
+                padding: 2rem 1rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">BROQUET CONSULTING LTD</div>
+            <div class="tagline">Strategic Administrative Solutions & Business Process Excellence</div>
+            <div class="company-info">Company No: 16742016 | SIC Code: 82110 | Incorporated: 25 September 2025</div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="home" class="hero">
+            <h1>Elevate Your Business Efficiency</h1>
+            <p>Expert consulting and administrative services that optimize operations, reduce costs, and accelerate your business growth</p>
+            <a href="#contact" class="cta-button">Book Your Strategic Consultation</a>
+        </section>
+
+        <section id="services" class="section">
+            <h2>Our Consulting & Administrative Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>🎯 Business Process Consulting</h4>
+                    <p>Strategic analysis and optimization of your administrative workflows, identifying inefficiencies and implementing streamlined processes for maximum productivity.</p>
+                </div>
+                <div class="service-card">
+                    <h4>📊 Administrative Systems Design</h4>
+                    <p>Custom administrative framework development, including procedure documentation, quality systems, and operational excellence programs tailored to your business.</p>
+                </div>
+                <div class="service-card">
+                    <h4>💼 Executive Administrative Support</h4>
+                    <p>High-level administrative services for executives and senior management, including strategic planning support, board meeting coordination, and confidential administration.</p>
+                </div>
+                <div class="service-card">
+                    <h4>📈 Performance Management</h4>
+                    <p>Administrative KPI development, performance tracking systems, and reporting frameworks to measure and improve operational effectiveness across your organization.</p>
+                </div>
+                <div class="service-card">
+                    <h4>🔄 Change Management</h4>
+                    <p>Strategic guidance for administrative transformations, system implementations, and organizational restructuring to ensure smooth transitions and sustained improvements.</p>
+                </div>
+                <div class="service-card">
+                    <h4>🛡️ Compliance & Risk Management</h4>
+                    <p>Administrative compliance audits, risk assessment, policy development, and regulatory adherence programs to protect your business and ensure operational integrity.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="packages" class="section">
+            <h2>Consulting Packages & Investment</h2>
+            <div class="pricing-grid">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Strategic Assessment</h3>
+                        <div class="package-price">£1,250</div>
+                        <p>One-time comprehensive analysis</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li>Complete administrative audit</li>
+                            <li>Process efficiency analysis</li>
+                            <li>Cost-benefit assessment</li>
+                            <li>Strategic recommendations report</li>
+                            <li>Implementation roadmap</li>
+                            <li>30-day follow-up consultation</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Choose Assessment</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Transformation Program</h3>
+                        <div class="package-price">£3,500</div>
+                        <p>3-month optimization project</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li>Full business process redesign</li>
+                            <li>Custom system implementation</li>
+                            <li>Staff training and development</li>
+                            <li>Performance monitoring setup</li>
+                            <li>Quality assurance framework</li>
+                            <li>Monthly progress reviews</li>
+                            <li>Post-implementation support</li>
+                            <li>ROI measurement and reporting</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Choose Transformation</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Strategic Partnership</h3>
+                        <div class="package-price">£2,200</div>
+                        <p>Monthly retainer program</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li>Ongoing strategic advisory services</li>
+                            <li>24/7 administrative support</li>
+                            <li>Quarterly efficiency reviews</li>
+                            <li>Priority response to urgent needs</li>
+                            <li>Continuous process improvement</li>
+                            <li>Executive-level consultation</li>
+                            <li>Custom reporting and analytics</li>
+                            <li>Annual strategic planning session</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Choose Partnership</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center; background: #ecf0f1; padding: 2rem; border-radius: 10px;">
+                <h3>Bespoke Consulting Services</h3>
+                <p><strong>Daily Rate: £750/day</strong> | <strong>Hourly Rate: £125/hour</strong></p>
+                <p>Tailored consulting engagements for complex organizational challenges, merger integration, and specialized administrative projects.</p>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About BROQUET CONSULTING LTD</h2>
+            <div class="about-content">
+                <div>
+                    <h3>Your Strategic Administrative Partner</h3>
+                    <p>BROQUET CONSULTING LTD is a newly established UK consultancy specializing in combined office administrative service activities under SIC code 82110. We combine strategic consulting expertise with practical administrative solutions to deliver transformational results for businesses seeking operational excellence.</p>
+                    
+                    <p>Our approach goes beyond traditional administrative support - we provide strategic guidance that optimizes entire business operations, reduces costs, and creates sustainable competitive advantages through administrative efficiency and process excellence.</p>
+
+                    <h3>Why Choose BROQUET CONSULTING?</h3>
+                    <ul style="margin-top: 1rem;">
+                        <li>✓ Fresh perspective with innovative methodologies</li>
+                        <li>✓ Strategic consulting combined with hands-on implementation</li>
+                        <li>✓ Proven track record in operational transformation</li>
+                        <li>✓ Customized solutions for each client's unique needs</li>
+                        <li>✓ Measurable ROI and performance improvements</li>
+                        <li>✓ Long-term partnership approach to sustainable growth</li>
+                    </ul>
+                </div>
+                
+                <div class="contact-info">
+                    <h4>Transform Your Operations</h4>
+                    <div class="contact-item">
+                        <strong>📧 Email:</strong> consulting@broquetconsulting.co.uk
+                    </div>
+                    <div class="contact-item">
+                        <strong>📱 Phone:</strong> +44 20 7946 0971
+                    </div>
+                    <div class="contact-item">
+                        <strong>🏢 Address:</strong> 128 City Road<br>
+                        London, EC1V 2NX
+                    </div>
+                    <div class="contact-item">
+                        <strong>⏰ Consultation Hours:</strong> Mon-Fri 9:00-17:00<br>
+                        Emergency support available
+                    </div>
+                    <div class="contact-item">
+                        <strong>🌐 Company Registration:</strong><br>
+                        Companies House No: 16742016
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section" style="text-align: center; background: #8E44AD; color: white;">
+            <h2 style="color: white;">Ready to Transform Your Business Operations?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Schedule your strategic consultation today and discover how our expert guidance can revolutionize your business efficiency.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <div>
+                    <h4>🎯 Strategic Assessment</h4>
+                    <p>Comprehensive 2-hour consultation to identify opportunities and develop transformation strategies.</p>
+                </div>
+                <div>
+                    <h4>⚡ Rapid Implementation</h4>
+                    <p>Fast-track solutions with measurable improvements visible within the first 30 days of engagement.</p>
+                </div>
+                <div>
+                    <h4>💯 Results Guarantee</h4>
+                    <p>We guarantee measurable improvements in efficiency and cost reduction or your investment back.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <a href="mailto:consulting@broquetconsulting.co.uk?subject=Strategic%20Consulting%20Inquiry&body=Hello%2C%0A%0AI%27m%20interested%20in%20your%20strategic%20consulting%20services.%20Please%20contact%20me%20to%20schedule%20a%20consultation.%0A%0ACompany%20Name%3A%0AContact%20Person%3A%0APhone%20Number%3A%0ACurrent%20Challenges%3A%0APreferred%20Consultation%20Date%3A%0A%0AThank%20you%21" class="cta-button" style="margin-right: 1rem;">Schedule Consultation</a>
+                <a href="tel:+442079460971" class="cta-button" style="background: #27AE60;">Call Now</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 BROQUET CONSULTING LTD. All rights reserved. | Company Registration: 16742016 | SIC Code: 82110 - Combined Office Administrative Service Activities</p>
+            <p style="margin-top: 0.5rem; opacity: 0.8;">Registered Office: 128 City Road, London, EC1V 2NX, United Kingdom</p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .package-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
